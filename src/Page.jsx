@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react"
+import NavBar from "./components/NavBar";
+import LandingPage from "./components/LandingPage";
+import "./styles.css"
 
 export default function Page() {
   /** Set up states */
@@ -33,14 +36,14 @@ export default function Page() {
 
   // Personal information
   const personalInfo = {
-    name: "Alex Johnson",
-    title: "Computer Science Student",
-    university: "University of Technology",
-    graduationYear: "2025",
-    location: "San Francisco, CA",
-    email: "alex.johnson@email.com",
-    linkedin: "https://linkedin.com/in/alexjohnson",
-    github: "https://github.com/alexjohnson",
+    name: "Thomas De Sa",
+    title: "Mathematics & Computer Science Student",
+    university: "Wilfrid Laurier University",
+    graduationYear: "2026",
+    location: "Waterloo, ON",
+    email: "desa2thomas@gmail.com",
+    linkedin: "https://www.linkedin.com/in/thomas-de-sa-598379248/",
+    github: "https://github.com/desa-thomas",
     bio: "Passionate computer science student with experience in full-stack development, machine learning, and software engineering. Always eager to learn new technologies and solve complex problems.",
   }
 
@@ -55,6 +58,7 @@ export default function Page() {
 
   // Navigation scroll handler
   const scrollToSection = (sectionId) => {
+    console.log("Scroll to", sectionId)
     setActiveSection(sectionId)
     const element = document.getElementById(sectionId)
     element?.scrollIntoView({ behavior: "smooth" })
@@ -62,7 +66,22 @@ export default function Page() {
 
   if (loading) {
     return <div>loading...</div>;
-  } else {
-    return <div> Bruh </div>;
+  } 
+  else {
+    return (
+      <>
+      <NavBar scrollToSection={scrollToSection} activeSection={activeSection}/>
+
+      {/* Welcome section/ landing page */}
+      <LandingPage personalInfo={personalInfo}/>
+
+      {/* About section */}
+      {/* Projects section */}
+      {/* Expereience section */}
+      {/* Contact section */}
+      {/* Footer */}
+
+      </>
+    );
   }
 }

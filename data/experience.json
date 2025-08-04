@@ -1,0 +1,18 @@
+{
+  "experience": [
+    {
+      "title": "Software Engineering Intern",
+      "company": "TechCorp Solutions",
+      "location": "San Francisco, CA",
+      "duration": "June 2024 - August 2024",
+      "type": "Internship",
+      "description": "Developed and maintained web applications using React and Node.js. Collaborated with senior developers on feature implementation and bug fixes.",
+      "achievements": [
+        "Improved application performance by 25% through code optimization",
+        "Implemented responsive design for mobile compatibility",
+        "Contributed to 3 major feature releases"
+      ],
+      "technologies": ["React", "Node.js", "PostgreSQL", "Git", "Agile"]
+    }
+]
+}

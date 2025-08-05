@@ -1,7 +1,7 @@
-
-export default function Badge ( { children })
-{
-    return(<div>
-        {children}
-    </div>)
+export default function Badge({ children }) {
+  return (
+    <div class="badge">
+      <p>{children}</p>
+    </div>
+  );
 }

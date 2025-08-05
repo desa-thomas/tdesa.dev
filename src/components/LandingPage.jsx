@@ -4,7 +4,7 @@ import { FolderGit2 } from "lucide-react";
 
 export default function LandingPage({ personalInfo, scrollToSection }) {
   return (
-    <div className="section" id="home">
+    <div className="section" style={{"padding": "0px 40px"}} id="home">
       <div className="landing-page section-content">
         <h1>{personalInfo.name}</h1>
         <h2>{personalInfo.title}</h2>

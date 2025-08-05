@@ -16,9 +16,7 @@ export default function NavBar( {scrollToSection, activeSection} ) {
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
-                // className={`capitalize hover:text-blue-400 transition-colors ${
-                //   activeSection === section ? "text-blue-400" : "text-gray-300"
-                // }`}
+                // className= {activeSection === section ? "active": ""}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}
               </button>

@@ -55,31 +55,37 @@ export default function Page() {
   // Skills data
   const skills = {
     "Programming Languages": [
-      "JavaScript",
-      "TypeScript",
       "Python",
+      "C/C++",
+      "Bash",
       "Java",
-      "C++",
+      "JavaScript",
       "SQL",
+      "PHP",
+      "R",
     ],
-    Frontend: [
-      "React",
-      "Vue.js",
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "Material-UI",
+    "Data Analytics & Machine Learning": [
+      "PyTorch",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "SciPy",
+      "Matplotlib",
+      "Seaborn",
     ],
-    Backend: ["Node.js", "Express", "Flask", "Django", "REST APIs"],
-    Database: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"],
     "Tools & Technologies": [
       "Git",
+      "Linux",
+      "Jupyter",
       "Docker",
       "AWS",
-      "Vercel",
       "Figma",
       "VS Code",
     ],
+    Backend: ["Node.js", "Express", "Flask", "REST APIs"],
+
+    Frontend: ["React", "HTML5", "CSS3", "Tailwind CSS"],
+    Database: ["MongoDB", "MySQL", "MariaDB"],
   };
 
   // Navigation scroll handler
@@ -87,7 +93,7 @@ export default function Page() {
     console.log("Scroll to", sectionId);
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" , block: "start"});
+    element?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   console.log(experience);
@@ -123,8 +129,9 @@ export default function Page() {
           {/* Footer */}
           <footer>
             <div>
-              <p >
-                © {new Date().getFullYear()} {personalInfo.name} | Developed with ❤️
+              <p>
+                © {new Date().getFullYear()} {personalInfo.name} | Developed
+                with ❤️
               </p>
             </div>
           </footer>

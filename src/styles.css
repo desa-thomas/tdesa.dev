@@ -1,36 +1,214 @@
+:root {
+    --nav-size: 60px;
+
+    /* Colors */
+    --dark-background: rgb(26, 26, 37);
+    --dark-alt-background: rgb(30, 30, 53);
+    --dark-accent-color: blue;
+
+    --dark-font-color: white;
+    --dark-highlight-font-color: rgb(59, 95, 255);
+    --dark-alt-font-color: rgb(123, 123, 128);
+}
+
 * {
     padding: 0px;
     margin: 0px;
-    font-family: sans-serif;
     box-sizing: border-box;
+
+    /* font */
+    font-family: sans-serif;
+    color: var(--dark-font-color);
 }
 
-html{
+html {
     display: flex;
     flex-direction: column;
-    width: 100vw; 
-    
+    width: 100vw;
+
 }
 
+button,
+a {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.alt-background
+{
+    background-color: var(--dark-alt-background);
+}
+/* each section within content */
+.section {
+    scroll-margin-top: var(--nav-size);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    width:100%; 
+    padding: 20px; 
+}
+
+.section-content
+{
+    max-width: 1000px;    
+    width: 100%;
+    /* margin-top: max(20vh, 100px);
+    margin-bottom: max(20vh, 100px); */
+    max-height: calc(60vh - var(--nav-size));
+    height: max-content;
+    flex-grow: 2;
+}
+
+/* Main content under nav bar */
+.content {
+    background-color: var(--dark-background);
+    margin-top: var(--nav-size);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    align-items: center;
+}
+
+/* Navigation bar styles */
+
 .nav-bar {
-    background-color: rgb(114, 210, 240);
+    background-color: var(--dark-background);
+    border-bottom: var(--dark-alt-font-color) 1px solid;
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px;
 
-    position: 'fixed';
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
-    color: 'white';
+    height: var(--nav-size);
     z-index: 1000;
 }
 
-.landing-page
-{
+.nav-bar h2 {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--dark-highlight-font-color);
+}
+
+.nav-containers {
+    display: flex;
+    width: 15vw;
+    gap: 20px;
+}
+
+/* Social icons in nav bar */
+.nav-containers a>* {
+    fill: var(--dark-font-color); 
+    transition: fill 0.3s ease, color 0.3s ease;
+}
+
+.nav-containers a>:hover {
+    fill: var(--dark-highlight-font-color);
+}
+
+.nav-button-container {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-bar button:hover {
+    color: var(--dark-highlight-font-color);
+}
+
+/* Landing page */
+.landing-page {
     display: flex;
     flex-direction: column;
-    align-items: center1;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+
+    margin-top: max(20vh, 100px);
+    margin-bottom: max(20vh, 100px);
+}
+
+.landing-page h1 {
+    font-size: 4em;
+}
+
+.landing-page h2 {
+    color: var(--dark-highlight-font-color);
+}
+
+.landing-page h2,
+h3 {
+    font-weight: 500;
+}
+
+.landing-page p {
+    color: var(--dark-alt-font-color);
+    font-size: large;
+    line-height: 2;
+    text-align: left;
+}
+
+.landing-page button {
+    background-color: transparent;
+    border: solid 1px var(--dark-highlight-font-color);
+    border-radius: 10px;
+
+    font-size: medium;
+    font-weight: 500;
+    padding: 10px;
+    flex-grow: 2;
+}
+
+.landing-page button:hover {
+    background-color: var(--dark-highlight-font-color);
+}
+
+.landing-page button div {
+    display: flex;
+    align-items: flex-end;
+
+    gap: 10px;
+}
+
+.landing-page-button-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+/* About Me */
+.aboutme-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.badges {
+    display: flex;
+}
+
+/* Footer */
+footer {
+    min-height: max-content;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
 }

@@ -1,18 +1,19 @@
 {
   "experience": [
     {
-      "title": "Software Engineering Intern",
-      "company": "TechCorp Solutions",
-      "location": "San Francisco, CA",
-      "duration": "June 2024 - August 2024",
-      "type": "Internship",
-      "description": "Developed and maintained web applications using React and Node.js. Collaborated with senior developers on feature implementation and bug fixes.",
+      "id": 1, 
+      "title": "Math & Stats Peer Tutor",
+      "company": "Wilfrid Laurier University",
+      "location": "Waterloo, ON",
+      "duration": "Sept 2023 - Present",
+      "type": "Part-time",
+      "description": "Description",
       "achievements": [
-        "Improved application performance by 25% through code optimization",
-        "Implemented responsive design for mobile compatibility",
-        "Contributed to 3 major feature releases"
+        "achievement1 ",
+        "achievement2",
+        "achievement3"
       ],
-      "technologies": ["React", "Node.js", "PostgreSQL", "Git", "Agile"]
+      "technologies": ["Bruh"]
     }
 ]
 }

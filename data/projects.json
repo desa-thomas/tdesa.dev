@@ -1,13 +1,13 @@
 {
   "projects": [
     {
+      "id": 1, 
       "title": "E-Commerce Platform",
       "description": "Full-stack web application built with React, Node.js, and MongoDB. Features user authentication, payment processing, and admin dashboard.",
       "technologies": ["React", "Node.js", "MongoDB", "Express", "Stripe API"],
       "githubUrl": "https://github.com/username/ecommerce-platform",
       "liveUrl": "https://ecommerce-demo.vercel.app",
-      "image": "/placeholder.svg?height=200&width=300",
-      "featured": true
+      "image": "/placeholder.svg?height=200&width=300"
     }
 ]
 }

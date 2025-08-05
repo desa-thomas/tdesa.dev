@@ -1,7 +1,12 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 import NavBar from "./components/NavBar";
 import LandingPage from "./components/LandingPage";
-import "./styles.css"
+import AboutMe from "./components/AboutMe";
+import ProjectsSection from "./components/ProjectsSection";
+import ExperienceSection from "./components/ExperienceSection";
+import Contact from "./components/Contact";
+
+import "./styles.css";
 
 export default function Page() {
   /** Set up states */
@@ -45,42 +50,85 @@ export default function Page() {
     linkedin: "https://www.linkedin.com/in/thomas-de-sa-598379248/",
     github: "https://github.com/desa-thomas",
     bio: "Passionate computer science student with experience in full-stack development, machine learning, and software engineering. Always eager to learn new technologies and solve complex problems.",
-  }
+  };
 
   // Skills data
   const skills = {
-    "Programming Languages": ["JavaScript", "TypeScript", "Python", "Java", "C++", "SQL"],
-    Frontend: ["React", "Vue.js", "HTML5", "CSS3", "Tailwind CSS", "Material-UI"],
+    "Programming Languages": [
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "Java",
+      "C++",
+      "SQL",
+    ],
+    Frontend: [
+      "React",
+      "Vue.js",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Material-UI",
+    ],
     Backend: ["Node.js", "Express", "Flask", "Django", "REST APIs"],
     Database: ["MongoDB", "PostgreSQL", "MySQL", "Firebase"],
-    "Tools & Technologies": ["Git", "Docker", "AWS", "Vercel", "Figma", "VS Code"],
-  }
+    "Tools & Technologies": [
+      "Git",
+      "Docker",
+      "AWS",
+      "Vercel",
+      "Figma",
+      "VS Code",
+    ],
+  };
 
   // Navigation scroll handler
   const scrollToSection = (sectionId) => {
-    console.log("Scroll to", sectionId)
-    setActiveSection(sectionId)
-    const element = document.getElementById(sectionId)
-    element?.scrollIntoView({ behavior: "smooth" })
-  }
+    console.log("Scroll to", sectionId);
+    setActiveSection(sectionId);
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: "smooth" , block: "start"});
+  };
 
+  console.log(experience);
   if (loading) {
     return <div>loading...</div>;
-  } 
-  else {
+  } else {
     return (
       <>
-      <NavBar scrollToSection={scrollToSection} activeSection={activeSection}/>
+        <NavBar
+          scrollToSection={scrollToSection}
+          activeSection={activeSection}
+        />
 
-      {/* Welcome section/ landing page */}
-      <LandingPage personalInfo={personalInfo}/>
+        <div className="content">
+          {/* Welcome section/ landing page */}
+          <LandingPage
+            personalInfo={personalInfo}
+            scrollToSection={scrollToSection}
+          />
 
-      {/* About section */}
-      {/* Projects section */}
-      {/* Expereience section */}
-      {/* Contact section */}
-      {/* Footer */}
+          {/* About section */}
+          <AboutMe personalinfo={personalInfo} skills={skills} />
 
+          {/* Projects section */}
+          <ProjectsSection projects={projects} />
+
+          {/* experience section */}
+          <ExperienceSection experiences={experience} />
+
+          {/* Contact section */}
+          <Contact />
+
+          {/* Footer */}
+          <footer>
+            <div>
+              <p >
+                © {new Date().getFullYear()} {personalInfo.name} | Developed with ❤️
+              </p>
+            </div>
+          </footer>
+        </div>
       </>
     );
   }

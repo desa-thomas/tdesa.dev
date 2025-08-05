@@ -2,12 +2,10 @@ import Badge from "./Badge";
 
 export default function AboutMe({ personalinfo, skills }) {
   const aboutme1 = `I'm a passionate computer science student with a strong foundation in 
-    mathematics and a keen interest in machine learning and statistics. 
-    My journey in tech started with curiosity about how things work, 
-    and has evolved into a deep appreciation for clean code, user experience, and innovative solutions.`;
+    mathematics and a keen interest in machine learning and statistics.`;
 
   const aboutme2 = `
-    I am currently pursuing my degree at Wilfrid Laurier University, where I've gained hands-on experience through 
+    I am currently pursuing my Bsc at Wilfrid Laurier University, where I've gained hands-on experience through 
     my courses, personal projects, and collaborative work. I enjoy tackling complex problems and am 
     always eager to learn new technologies and methodologies.`;
 

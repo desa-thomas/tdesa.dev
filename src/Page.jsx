@@ -47,6 +47,8 @@ export default function Page() {
     university: "Wilfrid Laurier University",
     graduationYear: "2026",
     location: "Waterloo, ON",
+
+    resume_link: "https://github.com/desa-thomas/public-resume/blob/main/resume.pdf", 
     email: "desa2thomas@gmail.com",
     linkedin: "https://www.linkedin.com/in/thomas-de-sa-598379248/",
     github: "https://github.com/desa-thomas",
@@ -133,7 +135,7 @@ export default function Page() {
               <p>
                 © {new Date().getFullYear()} {personalInfo.name}
               </p>
-              <p className="footnote">Developed with ❤️, and <span><SiReact style={{"verticalAlign": "text-bottom"}} fill="#61DAFB"/></span></p>
+              <p className="footnote">Developed with ❤️, and <SiReact style={{"verticalAlign": "text-bottom"}} fill="#61DAFB"/></p>
           </footer>
         </div>
       </>

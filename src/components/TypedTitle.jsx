@@ -5,7 +5,7 @@ export default function TypedTitle( {name} )
     const fulltext =  name; 
     const typeSpeed = 100; 
     const delSpeed = 50; 
-    const waitTime = 10000; 
+    const waitTime = 5000; 
     const [text, setText] = useState("");
     const [isTyping, setIsTyping] = useState(true);
     

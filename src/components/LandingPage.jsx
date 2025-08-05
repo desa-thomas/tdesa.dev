@@ -28,8 +28,7 @@ export default function LandingPage({ personalInfo, scrollToSection }) {
               Get in touch
             </div>
           </button>
-          {/* TODO redirct to resume */}
-          <button>
+          <button onClick={()=>{ window.open(personalInfo.resume_link, "_blank")}}>
             <div>
               <FileText />
               Resume

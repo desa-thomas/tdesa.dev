@@ -49,7 +49,8 @@ export default function Page() {
     email: "desa2thomas@gmail.com",
     linkedin: "https://www.linkedin.com/in/thomas-de-sa-598379248/",
     github: "https://github.com/desa-thomas",
-    bio: "Passionate computer science student with experience in full-stack development, machine learning, and software engineering. Always eager to learn new technologies and solve complex problems.",
+    bio: `Passionate computer science student with experience in full-stack development,
+     and machine learning. Always eager to learn new technologies and solve complex problems.`,
   };
 
   // Skills data
@@ -128,12 +129,10 @@ export default function Page() {
 
           {/* Footer */}
           <footer>
-            <div>
+              <p>Developed with ❤️</p>
               <p>
-                © {new Date().getFullYear()} {personalInfo.name} | Developed
-                with ❤️
+                © {new Date().getFullYear()} {personalInfo.name}
               </p>
-            </div>
           </footer>
         </div>
       </>

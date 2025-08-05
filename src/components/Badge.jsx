@@ -1,6 +1,6 @@
-export default function Badge({ children }) {
+export default function Badge({ children, className}) {
   return (
-    <div class="badge">
+    <div className={`badge ${className != null ? className : ""}`}>
       <p>{children}</p>
     </div>
   );

@@ -11,7 +11,7 @@ export default function NavBar( {scrollToSection, activeSection} ) {
 
         {/* navigation links */}
         <div className="nav-button-container">
-          {["home", "about", "experience", "projects", "contact"].map(
+          {["home", "about", "projects", "experience", "contact"].map(
             (section) => (
               <button
                 key={section}
@@ -26,10 +26,10 @@ export default function NavBar( {scrollToSection, activeSection} ) {
 
         {/* Socials */}
         <div className="nav-containers" style={{"justifyContent": "flex-start"}}> 
-          <a target="_blank" href="https://github.com/desa-thomas" rel="noopener noreferrer">
-            <SiRefinedgithub size={26}/>
+          <a  target="_blank" href="https://github.com/desa-thomas" rel="noopener noreferrer">
+            < SiRefinedgithub size={26}/>
           </a>
-          <a> <SiLinkedin size={26}/></a>
+          <a href="https://www.linkedin.com/in/thomas-de-sa-598379248/" rel="noopener noreferrer" target="_blank"> <SiLinkedin size={26}/></a>
         </div>
 
       </div>

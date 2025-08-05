@@ -1,5 +1,6 @@
 :root {
     --nav-size: 60px;
+    --side-padding: 40px;
 
     /* Colors */
     --dark-background: rgb(26, 26, 37);
@@ -23,6 +24,7 @@
 }
 
 html {
+    background-color: var(--dark-background);
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -52,7 +54,7 @@ p {
     align-items: center;
 
     width: 100%;
-    padding: 40px 40px;
+    padding: var(--side-padding);
 }
 
 .section-content {
@@ -194,23 +196,27 @@ h3 {
     display: flex;
     gap: 20px;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 /* About Me */
 .aboutme-content {
     display: flex;
+
     width: 100%;
 
     justify-content: space-between;
     align-items: stretch;
+    gap: 5vw;
 
 }
 
 .aboutme-section {
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: max(40vw, 400px);
 
 }
 
@@ -222,6 +228,7 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    max-width: 100%;
 }
 
 .skill-section {
@@ -260,12 +267,50 @@ h3 {
     flex-wrap: wrap;
 }
 
+/* PROJECT SECTION */
+
+
 /* Footer */
 footer {
     min-height: max-content;
     height: 15vh;
+
     display: flex;
+    flex-direction: column;
+
     align-items: center;
     justify-items: center;
 
+}
+
+/* PHONE RULES */
+@media (max-width: 600px) {
+    .aboutme-content {
+        flex-wrap: wrap;
+    }
+    .nav-bar
+    {
+        justify-content: center;
+    }
+    .nav-button-container button
+    {
+        font-size: medium
+    }
+    .nav-containers{
+        display: none;
+    }
+    .landing-page{
+        /* no nav bar */
+        margin-top: 15vh;
+
+    }
+    .landing-page h1 
+    {
+        font-size: 3em;
+    }
+
+    .landing-page h2
+    {
+        font-size: 1.5em;
+    }
 }

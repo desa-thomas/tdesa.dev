@@ -1,19 +1,16 @@
 {
   "experience": [
     {
-      "id": 1, 
       "title": "Math & Stats Peer Tutor",
       "company": "Wilfrid Laurier University",
       "location": "Waterloo, ON",
       "duration": "Sept 2023 - Present",
       "type": "Part-time",
-      "description": "Description",
+      "description": " Conducted drop-in homework help sessions for groups of 10-25 students, clarifying complex concepts in math and computer science courses to improve their understanding and problem-solving skills.",
       "achievements": [
-        "achievement1 ",
-        "achievement2",
-        "achievement3"
-      ],
-      "technologies": ["Bruh"]
+        "Demonstrated leadership skills by running tutoring sessions and fostering a supportive environment conducive to learning.",
+        "Tailored support to each student's needs by assessing their proficiency levels in course content, ensuring efficient and equitable distribution of time."
+      ]
     }
 ]
 }

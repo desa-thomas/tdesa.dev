@@ -7,6 +7,7 @@ import ExperienceSection from "./components/ExperienceSection";
 import Contact from "./components/Contact";
 
 import "./styles.css";
+import { SiReact } from "react-icons/si";
 
 export default function Page() {
   /** Set up states */
@@ -125,14 +126,14 @@ export default function Page() {
           <ExperienceSection experiences={experience} />
 
           {/* Contact section */}
-          <Contact />
+          <Contact personalInfo={personalInfo} />
 
           {/* Footer */}
           <footer>
-              <p>Developed with ❤️</p>
               <p>
                 © {new Date().getFullYear()} {personalInfo.name}
               </p>
+              <p className="footnote">Developed with ❤️, and <span><SiReact style={{"verticalAlign": "text-bottom"}} fill="#61DAFB"/></span></p>
           </footer>
         </div>
       </>

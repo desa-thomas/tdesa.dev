@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "ASCIIplot",
-      "description": "Graphing calculator in your terminal! Coming soon",
+      "description": "Graphing calculator in your terminal! Under development",
       "technologies": ["C"],
       "githubUrl": "https://github.com/desa-thomas/ASCIIplot",
       "image": "/parabolaTest.png"

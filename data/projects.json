@@ -1,13 +1,26 @@
 {
   "projects": [
     {
-      "id": 1, 
-      "title": "E-Commerce Platform",
-      "description": "Full-stack web application built with React, Node.js, and MongoDB. Features user authentication, payment processing, and admin dashboard.",
-      "technologies": ["React", "Node.js", "MongoDB", "Express", "Stripe API"],
-      "githubUrl": "https://github.com/username/ecommerce-platform",
-      "liveUrl": "https://ecommerce-demo.vercel.app",
-      "image": "public/skeleton-on-fire.jpg"
+      "title": "ASCIIplot",
+      "description": "Graphing calculator in your terminal! Coming soon",
+      "technologies": ["C"],
+      "githubUrl": "https://github.com/desa-thomas/ASCIIplot",
+      "image": "/parabolaTest.png"
+    },
+    {
+      "title": "Corporate News Aggregator",
+      "description": "Full stack web app that aggregates news articles about companies, with a focus on the ethical aspects of their business practices.",
+      "technologies": ["Python", "Flask", "MySql", "Javascript", "HTML/CSS"],
+      "githubUrl": "https://github.com/desa-thomas/Corporate-News-Aggregator",
+      "image": "/corporate-news.png"
+    },
+    {
+      "title": "Digit Classifier",
+      "description": "Full stack web app that uses a trained digit classifying neural network to classify user input ",
+      "technologies": ["Python", "PyTorch", "Flask", "Javascript"],
+      "githubUrl": "https://github.com/desa-thomas/digit-classifier",
+      "liveUrl": "https://digit-classifier.tdesa.dev",
+      "image": "/digit-classifier.png"
     }
-]
+  ]
 }

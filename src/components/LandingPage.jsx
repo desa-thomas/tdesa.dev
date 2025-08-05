@@ -6,7 +6,7 @@ export default function LandingPage({ personalInfo, scrollToSection }) {
   return (
     <div className="section" style={{"padding": "0px var(--side-padding"}} id="home">
       <div className="landing-page section-content">
-        <h1>{personalInfo.name}</h1>
+        <div className="title">{personalInfo.name}</div>
         <h2>{personalInfo.title}</h2>
         <h3>
           {personalInfo.university} • {personalInfo.graduationYear}

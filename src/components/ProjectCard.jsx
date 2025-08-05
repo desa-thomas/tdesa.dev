@@ -8,44 +8,40 @@ import { ExternalLink } from "lucide-react";
  */
 export default function ProjectCard({ project }) {
   return (
-    <div class="projectCard">
-
+    <div class="project-card">
       {/* Project Image */}
       <div className="img-container">
         <img src={project.image} />
       </div>
 
-        {/* Project content */}
+      {/* Project content */}
       <div className="project-content">
-        <h3>{project.title}</h3>
+        <div style={{"height": "100%"}}>
+             <h3>{project.title}</h3>
         <p>{project.description}</p>
-        <div>
-          {/* Technologies */}
-          <div className="badges">
-            {project.technologies.map((tech) => (
-              <Badge
-                key={tech}
-                variant="secondary"
-                className="bg-gray-700 text-gray-200"
-              >
-                {tech}
-              </Badge>
-            ))}
-          </div>
+        </div>
 
-          {/* Project Links */}
-          <div>
-            <button onClick={() => window.open(project.githubUrl, "_blank")}>
-              <SiGit />
-              Code
+
+        {/* tech used */}
+
+        <div className="badges">
+          {project.technologies.map((tech) => (
+            <Badge key={tech}>{tech}</Badge>
+          ))}
+        </div>
+
+        {/* Project Links */}
+        <div className="button-container">
+          <button onClick={() => window.open(project.githubUrl, "_blank")}>
+            <SiGit size={20}/>
+            Code
+          </button>
+          {project.liveUrl && (
+            <button style={{"backgroundColor": "var(--dark-highlight-font-color)", "border": "none"}}onClick={() => window.open(project.liveUrl, "_blank")}>
+              <ExternalLink size={20}/>
+              Live Demo
             </button>
-            {project.liveUrl && (
-              <button onClick={() => window.open(project.liveUrl, "_blank")}>
-                <ExternalLink />
-                Live Demo
-              </button>
-            )}
-          </div>
+          )}
         </div>
       </div>
     </div>

@@ -8,6 +8,6 @@ export default defineConfig({
   server: {
     host: true,        // <-- Allows access from network (0.0.0.0)
     port: 5500,        
-    allowedHosts: ["localhost", "tdesa.duckdns.org", "192.168.4.48"]
+    allowedHosts: ["localhost", "tdesa.duckdns.org","www.tdesa.duckdns.org" , "192.168.4.48"]
   },
 })

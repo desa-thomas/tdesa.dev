@@ -6,7 +6,7 @@ export default function NavBar( {scrollToSection, activeSection} ) {
       {/* Navigation header */}
       <div className="nav-bar">
         <div className="nav-containers" style={{"justifyContent": "flex-end"}}>
-          <h2 >tdesa.dev</h2>
+          <h2 >tdesa<span>.dev</span></h2>
         </div>
 
         {/* navigation links */}

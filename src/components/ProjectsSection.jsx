@@ -5,10 +5,12 @@ export default function ProjectsSection({ projects }) {
     <div className="section" id="projects">
       <div className="section-content">
         <h1> Projects </h1>
-      {projects.map((project) => (  
-        <ProjectCard project={project} key={project.id}/>
-        ))}
+        <div className="projects-container">
+          {projects.map((project, i) => (
+            <ProjectCard project={project} key={i} />
+          ))}
         </div>
+      </div>
     </div>
   );
 }

@@ -102,7 +102,7 @@ export default function Page() {
 
   console.log(experience);
   if (loading) {
-    return <div>loading...</div>;
+    return <div className="loading">loading...</div>;
   } else {
     return (
       <>

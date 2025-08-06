@@ -13,7 +13,7 @@ export default function Contact( {personalInfo})
                 <div className="contact-card">
                     <Mail className="lucide-icon" size={40}/>
                     <h3>Email</h3>
-                    <a href={personalInfo.email}>desa2thomas@gmail.com</a>
+                    <a href={"mailto:" + personalInfo.email}>desa2thomas@gmail.com</a>
                 </div>
                 <div className="contact-card">
                     <SiLinkedin className="icon" size={40}/>

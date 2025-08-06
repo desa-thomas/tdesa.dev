@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "title": "ASCIIplot",
+      "description": "Graphing calculator in your terminal! Under development",
+      "technologies": ["C"],
+      "githubUrl": "https://github.com/desa-thomas/ASCIIplot",
+      "image": "/parabolaTest.png"
+    },
+    {
+      "title": "Corporate News Aggregator",
+      "description": "Full stack web app that aggregates news articles about companies, with a focus on the ethical aspects of their business practices.",
+      "technologies": ["Python", "Flask", "MySql", "Javascript", "HTML/CSS"],
+      "githubUrl": "https://github.com/desa-thomas/Corporate-News-Aggregator",
+      "image": "/corporate-news.png"
+    },
+    {
+      "title": "Digit Classifier",
+      "description": "Full stack web app that uses a trained digit classifying neural network to classify user input ",
+      "technologies": ["Python", "PyTorch", "Flask", "Javascript"],
+      "githubUrl": "https://github.com/desa-thomas/digit-classifier",
+      "liveUrl": "https://digit-classifier.tdesa.dev",
+      "image": "/digit-classifier.png"
+    }
+  ]
+}

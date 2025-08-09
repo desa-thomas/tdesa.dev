@@ -1,5 +1,13 @@
 {
   "projects": [
+            {
+      "title": "Words of Wisdom",
+      "description": "Quote of the day / random quote generator app built with React and Tailwind.",
+      "technologies": ["React", "Tailwind", "Express", "Javascript"],
+      "githubUrl": "https://github.com/desa-thomas/words-of-wisdom",
+      "liveUrl": "https://wisewords.tdesa.dev",
+      "image": "/wisewords.png"
+    }, 
     {
       "title": "ASCIIplot",
       "description": "Graphing calculator in your terminal! Under development",

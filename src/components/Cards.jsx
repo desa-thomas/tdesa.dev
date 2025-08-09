@@ -95,7 +95,7 @@ export function ProjectCard({ project }) {
           {project.liveUrl && (
             <button style={{"backgroundColor": "var(--dark-highlight-font-color)", "border": "none"}}onClick={() => window.open(project.liveUrl, "_blank")}>
               <ExternalLink size={20}/>
-              Live Demo
+              Live
             </button>
           )}
         </div>

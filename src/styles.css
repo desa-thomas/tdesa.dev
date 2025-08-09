@@ -361,12 +361,11 @@ h3 {
 
 /* PROJECT SECTION */
 .projects-container {
-    display: grid;
-
+    display: flex;
+    overflow-x: scroll;
 
     justify-content: space-between;
     gap: 10px;
-    flex-wrap: wrap;
 
     padding: 20px;
     border: var(--dark-border-color) 3px solid;
@@ -376,8 +375,10 @@ h3 {
 
 .project-card {
     background-color: var(--dark-background);
-    max-width: 100%;
+    
+    min-width: min(500px, 100%);
     width: 100%;
+
     border: var(--dark-border-color) 1px solid;
     border-radius: 15px;
     padding-top: 30px;

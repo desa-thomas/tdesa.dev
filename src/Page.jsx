@@ -1,13 +1,18 @@
 import { useState, useEffect } from "react";
 import NavBar from "./components/NavBar";
-import LandingPage from "./components/LandingPage";
-import AboutMe from "./components/AboutMe";
-import ProjectsSection from "./components/ProjectsSection";
-import ExperienceSection from "./components/ExperienceSection";
-import Contact from "./components/Contact";
 
 import "./styles.css";
-import { SiReact } from "react-icons/si";
+import { SiReact, SiLinkedin, SiRefinedgithub } from "react-icons/si";
+
+import { FileText } from "lucide-react";
+import { Mail } from "lucide-react";
+import { FolderGit2 } from "lucide-react";
+
+import TypedTitle from "./components/TypedTitle";
+import Badge from "./components/Badge";
+
+import {ProjectCard, ExperienceCard} from "./components/Cards"
+
 
 export default function Page() {
   /** Set up states */
@@ -141,4 +146,157 @@ export default function Page() {
       </>
     );
   }
+}
+
+
+
+function LandingPage({ personalInfo, scrollToSection }) {
+  return (
+    <div className="section" style={{"padding": "0px var(--side-padding"}} id="home">
+      <div className="landing-page section-content">
+        <TypedTitle name={personalInfo.name}/>
+        <h2>{personalInfo.title}</h2>
+        <h3>
+          {personalInfo.university} • {personalInfo.graduationYear}
+        </h3>
+        <p>{personalInfo.bio}</p>
+
+        {/* Quick Buttons */}
+        <div className="landing-page-button-container">
+          <button onClick={() => scrollToSection("projects")}>
+            <div>
+              <FolderGit2 />
+              View my work
+            </div>
+          </button>
+          <button onClick={() => scrollToSection("contact")}>
+            <div>
+              <Mail />
+              Get in touch
+            </div>
+          </button>
+          <button onClick={()=>{ window.open(personalInfo.resume_link, "_blank")}}>
+            <div>
+              <FileText />
+              Resume
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+function AboutMe({ skills }) {
+  const aboutme1 = `I'm a passionate computer science student with a strong foundation in 
+    mathematics and a keen interest in machine learning and statistics.`;
+
+  const aboutme2 = `
+    I am currently pursuing my Bsc at Wilfrid Laurier University, where I've gained hands-on experience through 
+    my courses, personal projects, and collaborative work. I enjoy tackling complex problems and am 
+    always eager to learn new technologies and methodologies.`;
+
+  return (
+    <div className="section alt-background" id="about">
+      <div className="section-content">
+
+        <h1> About Me </h1>
+        <div className="aboutme-content">
+          {/* Me description */}
+          <div className="aboutme-section">
+            <p>{aboutme1}</p>
+            <p>{aboutme2}</p>
+          </div>
+
+          {/* Skills */}
+          <div className="aboutme-section" style={{"alignItems": "flex-end"}}>
+
+            <div className="tech-skills-container">
+              <h2 style={{"alignSelf": "flex-start"}}>Techincal Skills</h2>
+            {Object.entries(skills).map(([category, skillList]) => (
+              <div key={category} className="skill-section">
+                <h4>{category}</h4>
+                <div className="badges">
+                  {skillList.map((skill) => (
+                    <Badge
+                      key={skill}
+                      variant="secondary"
+                      className="bg-gray-700 text-gray-200"
+                    >
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function ProjectsSection({ projects }) {
+  return (
+    <div className="section" id="projects">
+      <div className="section-content">
+        <h1> Projects </h1>
+        <div className="projects-container">
+          {projects.map((project, i) => (
+            <ProjectCard project={project} key={i} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+function ExperienceSection({ experiences }) {
+
+  return (
+    <div className="section alt-background" id="experience">
+      <div className="section-content">
+      <h1> Experience </h1>
+      
+      <div className="experiences-cont">
+        {experiences.map((exp, i) => (
+          <ExperienceCard exp={exp} key={i}></ExperienceCard>
+        ))}
+      </div>
+      </div>
+    </div>
+  );
+}
+
+function Contact( {personalInfo})
+{
+    return(
+        <div className="section" id="contact">
+            <div className="section-content">
+            <h1>Get in Touch</h1>
+            <h4>I'm always open to discussing new opportunities, interesting projects, or just having a chat!</h4>
+
+            <div className="contacts-cont">
+                <div className="contact-card">
+                    <Mail className="lucide-icon" size={40}/>
+                    <h3>Email</h3>
+                    <a href={"mailto:" + personalInfo.email}>desa2thomas@gmail.com</a>
+                </div>
+                <div className="contact-card">
+                    <SiLinkedin className="icon" size={40}/>
+                    <h3>Linkedin</h3>
+                    <a href={personalInfo.linkedin} target="_blank">Connect with me</a>
+                </div>
+                <div className="contact-card"> 
+                    <SiRefinedgithub className="icon" size={40}/>
+                    <h3>Github</h3>
+                    <a target="_blank" href={personalInfo.github}>View my code</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    )
 }

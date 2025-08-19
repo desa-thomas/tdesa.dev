@@ -1,5 +1,13 @@
 {
   "projects": [
+
+    {
+      "title": "ASCIIplot",
+      "description": "Graphing calculator in your terminal built with C and ncurses. Uses a math expression parser I made for the project and linear interpolation to simulate curves with only ASCII characters.",
+      "technologies": ["C"],
+      "githubUrl": "https://github.com/desa-thomas/ASCIIplot",
+      "image": "/shifted_sin.png"
+    },
             {
       "title": "Words of Wisdom",
       "description": "Quote of the day / random quote generator app built with React and Tailwind.",
@@ -8,13 +16,6 @@
       "liveUrl": "https://wisewords.tdesa.dev",
       "image": "/wisewords.png"
     }, 
-    {
-      "title": "ASCIIplot",
-      "description": "Graphing calculator in your terminal built with C and ncurses. Uses a math expression parser I made for the project and linear interpolation to simulate curves with only ASCII characters.",
-      "technologies": ["C"],
-      "githubUrl": "https://github.com/desa-thomas/ASCIIplot",
-      "image": "/shifted_sin.png"
-    },
     {
       "title": "Corporate News Aggregator",
       "description": "Full stack web app that aggregates news articles about companies, with a focus on the ethical aspects of their business practices.",

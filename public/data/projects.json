@@ -10,10 +10,10 @@
     }, 
     {
       "title": "ASCIIplot",
-      "description": "Graphing calculator in your terminal! Under development",
+      "description": "Graphing calculator in your terminal built with C and ncurses. Uses a math expression parser I made for the project and linear interpolation to simulate curves with only ASCII characters.",
       "technologies": ["C"],
       "githubUrl": "https://github.com/desa-thomas/ASCIIplot",
-      "image": "/parabolaTest.png"
+      "image": "/shifted_sin.png"
     },
     {
       "title": "Corporate News Aggregator",

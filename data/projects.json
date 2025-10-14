@@ -13,7 +13,6 @@
       "description": "Quote of the day / random quote generator app built with React and Tailwind.",
       "technologies": ["React", "Tailwind", "Express", "Javascript"],
       "githubUrl": "https://github.com/desa-thomas/words-of-wisdom",
-      "liveUrl": "https://wisewords.tdesa.dev",
       "image": "/wisewords.png"
     }, 
     {
